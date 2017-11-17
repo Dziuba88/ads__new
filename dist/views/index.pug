@@ -24,55 +24,43 @@ block main
         .row
           .col.md-5
             .panel
-                .panel--header
-                  h3 345 322 показа
-                    small.t--success +12 032
-                  .dropdown.right
-                    .material-icons.dropdown-toggle(data-toggle="dropdown") settings
-                    ul.dropdown-menu(aria-labelledby='dLabel')
-                      li.active: a(href="#", title="Всё время") Всё время
-                      li: a(href="#", title="Сегодня") Сегодня
-                      li: a(href="#", title="Вчера") Вчера
-                      li: a(href="#", title="Сегодня") Сегодня
-                      li: a(href="#", title="Неделя") Неделя
-                .panel--body: #chart1
-          .col.md-5
-            .panel
-                .panel--header
-                  h3 переходов: 
-                    span 345 332 
-                    small.danger -12 032
-                  .dropdown
-                    .dropdown-toggle(data-toggle="dropdown"): i.material-icons settings
-                    ul.dropdown-menu(aria-labelledby='dLabel')
-                      li.active: a(href="#", title="Всё время") Всё время
-                      li: a(href="#", title="Сегодня") Сегодня
-                      li: a(href="#", title="Вчера") Вчера
-                      li: a(href="#", title="Сегодня") Сегодня
-                      li: a(href="#", title="Неделя") Неделя
-                .panel--body
-                  #chartdiv2(style="width: 100%; height: 200px; background-color: #FFFFFF;")
-          .col.md-2
-            .panel.stats-panel
               .panel--header
-                h3 статистика
-                .dropdown
-                  .dropdown-toggle(data-toggle="dropdown"): i.material-icons settings
+                h3 345 322 показа
+                  small.t--success +12 032
+                .dropdown.right
+                  .material-icons.dropdown-toggle(data-toggle="dropdown") settings
                   ul.dropdown-menu(aria-labelledby='dLabel')
                     li.active: a(href="#", title="Всё время") Всё время
                     li: a(href="#", title="Сегодня") Сегодня
                     li: a(href="#", title="Вчера") Вчера
                     li: a(href="#", title="Сегодня") Сегодня
                     li: a(href="#", title="Неделя") Неделя
+              .panel--body: #chart1(style="width: 100%; height: 186px;")
+          .col.md-5
+            .panel
+              .panel--header
+                h3 переходов: 
+                  span 345 332 
+                  small.t--danger -12 032
+                .dropdown.right
+                  .material-icons.dropdown-toggle(data-toggle="dropdown") settings
+                  ul.dropdown-menu(aria-labelledby='dLabel')
+                    li.active: a(href="#", title="Всё время") Всё время
+                    li: a(href="#", title="Сегодня") Сегодня
+                    li: a(href="#", title="Вчера") Вчера
+                    li: a(href="#", title="Сегодня") Сегодня
+                    li: a(href="#", title="Неделя") Неделя
+              .panel--body: #chart2(style="width: 100%; height: 186px;")
+          .col.md-2
+            .panel
               .stats
-                .stats-body
-                  .stats-title CTR
-                    span.danger +2,93 %
-                  .stats-count  0,012 %
-                .stats-graph <span class="bar success">4,3,6,4,5,4,7,3,5,7,3,5,2</span>
-              .stats
-                .stats-body
-                  .stats-title Потрачено
-                    span.success -12 224
-                  .stats-count $ 122 442.33
-                .stats-graph <span class="bar danger">-4,-3,-6,-4,-5,-4,-7,-3,-5,-7,-3,-5,-2</span>
+                .stats--body
+                  .stats--title CTR
+                    span.t--danger -0.001 %
+                  .stats--count  0.012 %
+                  #column1(style="width: 100%; height: 55px;")
+                .stats--body
+                  .stats--title Потрачено
+                    span.t--success -12 224
+                  .stats--count $ 122 442.33
+                  #column2(style="width: 100%; height: 55px;")
