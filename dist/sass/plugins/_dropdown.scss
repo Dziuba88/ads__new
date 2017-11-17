@@ -1,0 +1,57 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+  &-toggle {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+  }
+  &-menu {
+    display: none;
+    position: absolute;
+    padding: 5px 0;
+    background-color: #fff;
+    top: 100%;
+    box-shadow: 0 1px 3px rgba($base, 0.2);
+    border-radius: 0 0 2px 2px;
+    margin-top: 1px;
+    min-width: 100%;
+
+    li {
+      display: block;
+
+      a {
+        display: block;
+        padding: 0 20px;
+        white-space: nowrap;
+        line-height: 27px;
+        text-decoration: none;
+        color: $base;
+
+        &:hover {
+          background-color: rgba($accent, 0.12);
+        }
+
+        &.active {
+          color: #fff;
+          background-color: $accent;
+        }
+      }
+    }
+  }
+
+  &.right {
+    .dropdown-menu {left: auto;right: 0;}
+  }
+
+  &.left {
+    .dropdown-menu {left: 0;right: auto;}
+  }
+
+  &.open {
+    z-index: 99;
+    .dropdown-menu {display: block;}
+  }
+
+}

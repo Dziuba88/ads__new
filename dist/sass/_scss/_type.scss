@@ -1,0 +1,36 @@
+:root {
+  font-size: 13px;
+}
+
+body {
+  font-family: $font;
+  font-size: 1rem;
+  line-height: 1.38;
+  background-color: $light;
+  color: $base;
+}
+
+h1.page-title {
+  font-size: 1.846rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+  padding: 40px 0 20px;
+  line-height: 1;
+}
+
+nav ul {margin: 0;padding: 0;list-style: none;}
+
+
+a {
+  text-decoration: none;
+  color: $accent;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.t--success {
+  color: $success;
+}

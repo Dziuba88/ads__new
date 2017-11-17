@@ -1,0 +1,110 @@
+.filters {
+  padding: 24px 0 14px;
+  &--title {
+    padding-right: 10px;
+  }
+  ul {
+    li {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+      margin: 0 0 10px;
+
+
+
+      a {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.38;
+        padding: 8px 12px;
+        border-radius: 2px;
+
+        &.active {
+          background-color: $accent;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &-datepicker {
+    position: relative;
+    input {
+      position: relative;
+      z-index: 1;
+      line-height: 1.38;
+      font-size: 1rem;
+      padding: 0 6px 0 24px;
+      color: $accent;
+      background-color: $light;
+      border-radius: 2px;
+      border: 1px solid rgba($grey, 0.3);
+      height: 34px;
+
+      &:focus, &:hover {
+        background-color: #fff;
+      }
+    }
+    .placeholder {
+      position: absolute;
+      font-size: 18px;
+      width: 18px;height: 18px;
+      text-align: center; display: block;
+      color: $accent;
+      left: 5px;top: 50%;margin-top: -9px;
+      z-index: 2;
+
+    }
+
+    .daterangepicker {
+      display: flex;
+      display: none;
+      font-size: .8rem;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba($base, 0.2);
+      padding: 0;
+      z-index: 1;
+      width: 352px;
+
+      .ranges {
+        float: none;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-top: 1px solid $light;
+        text-align: right;
+        clear: both;
+        padding-top: 4px;
+      }
+
+      td.in-range {
+        background-color: rgba($accent, 0.12);
+        color: $base;
+      }
+      td.active {
+        background-color: $accent;
+        color: #fff;
+        border-radius: 0 !important;
+      }
+
+      th.month {
+        text-transform: uppercase;
+        color: $accent;
+      }
+
+      &:before, &:after {display: none;}
+
+      .calendar {
+        max-width: 220px;
+        margin: 0;
+        td, th {min-width: 24px;}
+      
+      }
+      .calendar.left .calendar-table {padding-right: 2px;}
+      .calendar.right .calendar-table {padding-left: 2px;}
+      .calendar-table {border-radius: 0;}
+
+      &_input {display: none;}
+    }
+  }
+}

@@ -1,0 +1,10 @@
+doctype html
+block variables
+html(lang="en")
+  block head
+  body.inxy.loading
+    .inxy-preloader: .inxy-preloader__circle
+    header.inxy-header: block header
+    main.inxy-main: block main
+    footer.inxy-footer: include ../components/footer
+    include ../components/scripts

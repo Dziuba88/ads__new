@@ -1,0 +1,29 @@
+// Colors
+  $primary: #0C4C9D !default;
+  $accent:  #7A569F !default;
+  $success: #78BE2D !default;
+  $danger:  #cc3333 !default;
+  $warning: #ff5722 !default;
+  $base:    #212121 !default;
+  $grey:    #757575 !default;
+  $light:   #EFEFEF !default;
+// Grid //
+  $cols: 12 !default;
+  $gutter: 20px !default;
+
+  $sm-screen: 640px !default;
+  $md-screen: 1000px !default;
+  $lg-screen: 1240px !default;
+
+  $mobile: "only screen and (max-width : #{$sm-screen - 1})" !default;
+  $tablet-up: "only screen and (min-width : #{$sm-screen})" !default;
+  $normal-up: "only screen and (min-width : #{$md-screen})" !default;
+  $large-up: "only screen and (min-width : #{$lg-screen})" !default;
+  $tablet-down: "only screen and (max-width : #{$md-screen - 1})" !default;
+  $normal-down: "only screen and (max-width : #{$lg-screen - 1})" !default;
+
+
+
+// Typography //
+  $font: 'Roboto', sans-serif !default;
+  $transition: all .2s ease-in-out !default;
