@@ -1,0 +1,40 @@
+mixin item(title, url)
+  li: a(href=url class=curent_page == title ? 'active' : '')= title
+// Default Navbar
+nav.navbar
+  .navbar__header
+    a(href="/").navbar--brand: img(src="img/logo.svg", alt="")
+  .navbar--toggle: i.material-icons menu
+  .navbar__body
+    ul.navbar__left
+      +item('Advert companies', './')
+      +item('Platforms', 'publisher.html')
+    ul.navbar__right
+      li.dropdown.finances
+        a.dropdown-toggle(data-toggle='dropdown')
+          span $ 122.3
+          i.material-icons keyboard_arrow_down
+        ul.dropdown-menu
+          +item('Add funds', 'refill-funds.html')
+          +item('Withdraw funds', 'withdraw-funds.html')
+      li.dropdown.user
+        a.dropdown-toggle(data-toggle='dropdown')
+          img(src="https://unsplash.it/100?image=1005", alt="").user--avatar
+          span.user--name Username
+          i.material-icons keyboard_arrow_down
+        ul.dropdown-menu
+          +item('Profile', 'profile-edit.html')
+          +item('Documents', 'profile-docs.html')
+          +item('Exit', 'login.html')
+      li.dropdown.lang
+        a.dropdown-toggle(data-toggle='dropdown') ENG
+        ul.dropdown-menu
+          li: a(href="").active ENG
+          li: a(href="") RUS
+          li: a(href="") GER
+          li: a(href="") 鸡汤
+.container
+    .row
+      .col.lg-10.offset-lg-1
+        h1.page-title 
+          a(href="./") <i class="material-icons">keyboard_backspace</i> Back

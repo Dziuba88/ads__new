@@ -23,6 +23,41 @@
   }
   &-footer {
     padding: 20px;
+    text-align: center;
+
+    .copiright {color: $grey;
+      a {color: inherit}
+    }
+
+    .support {
+      a {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 220px;
+        text-align: center;
+        z-index: 99;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        line-height: 1;
+
+        &:hover {opacity: .8;}
+      }
+
+      &--left {
+        left: 0;
+        background-color: $grey;
+        border-radius: 0 6px 0 0;
+      }
+      &--right {
+        right: 0;
+        background-color: $accent;
+        border-radius: 6px 0 0 0;
+      }
+
+      @media #{$tablet-down} {display: none;}
+    }
   }
 
 }

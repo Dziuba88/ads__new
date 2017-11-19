@@ -13,7 +13,7 @@
 
   $sm-screen: 640px !default;
   $md-screen: 1000px !default;
-  $lg-screen: 1240px !default;
+  $lg-screen: 1440px !default;
 
   $mobile: "only screen and (max-width : #{$sm-screen - 1})" !default;
   $tablet-up: "only screen and (min-width : #{$sm-screen})" !default;

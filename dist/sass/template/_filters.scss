@@ -107,4 +107,16 @@
       &_input {display: none;}
     }
   }
+
+  @media #{$mobile} {
+    ul {
+      li {
+        display: block;
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+
+        &:last-child, &.filters--title {display: none;}
+      }
+    }
+  }
 }

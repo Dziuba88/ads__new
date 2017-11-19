@@ -1,0 +1,257 @@
+.table {
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.38;
+  margin-bottom: 20px;
+
+  caption {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: 2.46rem;
+    line-height: 1;
+  }
+
+  th, td {
+    text-align: left;
+    font-weight: 400;
+    vertical-align: middle;
+  }  
+
+  thead {
+    border-top: 1px solid rgba($grey, .5);
+    color: $grey;
+
+    th, td {
+      padding: 10px 20px;
+    }  
+  }
+  tfoot {
+    border-bottom: 1px solid rgba($grey, .5);
+    color: $grey;
+  }
+
+  tbody {
+    th, td {
+      padding: 15px 20px;
+    }  
+  }
+
+  &--campaign {
+    
+    caption {
+
+      small {
+        font-size: 1rem;
+        display: inline-block;
+        margin-left: 20px;
+        vertical-align: bottom;
+
+        .dropdown-toggle {
+          display: block;
+          line-height: 1;
+          padding: 5px 0;
+          color: $accent;
+
+          span, i {
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          i {
+            font-size: 20px;
+            line-height: .9;
+          }
+
+          span {
+            padding: 0 5px;
+          }
+
+          &:hover span {
+            text-decoration: underline;
+          }
+        }
+
+        .open .dropdown-toggle i {transform: rotate(180deg)}
+      }
+    }
+
+    td, th {
+      &:nth-child(6), &:first-child, &:last-child {
+        text-align: center;
+      }
+      &:nth-child(4), &:nth-child(5), &:nth-child(7), &:nth-child(8) {
+        text-align: right;
+      }
+    }
+
+    tbody tr {
+      background-color: #fff;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+
+      span, small {
+        display: block;
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      small {opacity: .5;}
+
+    }
+
+    tbody + tbody {
+      &:before { content: '';display: block;width: 100%;height: 10px;}
+    }
+
+    .campaign__title {
+      font-weight: 700;
+      white-space: normal;
+      small {
+        color: $accent;
+        opacity: 1;
+        font-weight: 400;
+        white-space: normal;
+      }
+    }
+
+    a.material-icons {
+      text-decoration: none;
+      color: rgba($accent, .3);
+      display: block;
+      width: 26px;
+      height: 26px;
+      font-size: 26px;
+      margin: 0 auto;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+
+  }
+
+  &--history {
+    tbody, thead, tfoot {
+      td, th {
+        text-align: right;
+        padding: 10px;
+
+        &:first-child {text-align: left;}
+      }
+      tr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  @media #{$tablet-down} {
+    &.responsive {
+      display: block;
+
+      thead, tfoot {display: none;}
+
+      tbody, tbody tr {
+        display: block;
+        width: 100%;
+        position: relative;
+      }
+
+      tbody tr td {
+        display: block;
+
+        &[data-title] {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+          text-align: left;
+          padding: 5px 20px;
+
+          span, small {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &:before {
+            content: attr(data-title);
+            font-size: .75em;
+            color: $accent;
+            text-transform: uppercase;
+            padding-right: 10px;
+            opacity: .8;
+          }
+        }       
+      }
+
+    }
+
+    &--campaign {
+      caption {
+        display: block;
+        width: 100%;
+      }
+
+      tbody tr td {
+
+        &:first-child {
+          position: absolute;
+          bottom: 10px;left: 0;
+          border: 0 !important;
+        }
+
+        &:last-child {
+          padding: 0;text-align: right;
+          a {
+            display: inline-block;
+            padding: 10px;
+            width: auto;height: auto;
+            margin: 0 5px 0 auto;
+          }
+        }
+
+      }
+
+    }
+
+    &--history {
+      tbody, thead, tfoot {
+        tr {
+          border: 0;
+          padding-bottom: 10px;
+        }
+        tr td, tr th {
+          padding: 10px !important;
+          background-color: #fff;
+        }
+        [data-title] {
+          text-align: right !important;
+
+          &:before {
+            float: left;
+            line-height: 1.38rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$mobile} {
+    &--campaign caption {
+      display: block;
+      small {
+        display: block;
+        margin: 0;
+        .dropdown.right .dropdown-menu {
+            left: 0;
+            right: auto;
+        }
+      }
+    }
+
+  }
+
+
+
+}
+
