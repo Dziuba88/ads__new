@@ -9,7 +9,7 @@ block main
       .row
         .col.lg-10.offset-lg-1
           .row
-            .col.md-7
+            .col.lg-7
               h2.page-title Select payment method
               .panel.payments
                 .row
@@ -20,5 +20,71 @@ block main
                   .payments--method: a(href=""): img(src="img/e-payza-2-x.png", srcset="img/e-payza-2-x@2x.png 2x, img/e-payza-2-x@3x.png 3x", alt="")
                   .payments--method: a(href=""): img(src="img/e-epayments-2-x.png", srcset="img/e-epayments-2-x@2x.png 2x, img/e-epayments-2-x@3x.png 3x", alt="")
                   .payments--method: a(href=""): img(src="img/e-webmoney.png", srcset="img/e-webmoney@2x.png 2x, img/e-webmoney@3x.png 3x", alt="")
-            .col.md-5
+            .col.lg-5
               h3.page-title Your accounts
+              table.table.responsive.table--funds
+                tbody
+                  tr
+                    td.funds $ 122 442.33
+                    td 
+                      span Название счёта
+                      span.t--mutted хватит на 12 дней
+                    td: a(href="") Вывести деньги
+                    td: a.material-icons(href="") settings
+                tbody
+                  tr
+                    td.funds € 23.89
+                    td 
+                      span Название счёта
+                      span.t--mutted хватит на 12 дней
+                    td: a(href="") Вывести деньги
+                    td: a.material-icons(href="") settings
+          // History table //
+          table.table.responsive.table--history
+            caption
+              span Payments history
+              nav.filters
+                ul
+                  li: a(href="#").active All time
+                  li: a(href="#") Today
+                  li: a(href="#") Yesterday
+                  li: a(href="#") Week
+                  li: a(href="#") Month
+                  li: a(href="#") Section
+                  li: a(href="#") Year
+                  li: form.filters-datepicker
+                    input(type="text", name="daterange")
+                    i.material-icons.placeholder &#xE24F;
+              
+            thead
+              tr
+                th Date
+                th Type
+                th Status  
+                th Documents
+                th Amount  
+                th Balance 
+            tbody
+              - for (var x = 1; x < 2; x++)
+                tr
+                  td(data-title='Date') #{12 + x}.05.2017              
+                  td(data-title='Type') Refill
+                  td(data-title='Status'): span.t--success Completed
+                  td(data-title='Documents'): a(href="") Invoice #{346632+x}
+                  td(data-title='Amount'):  span.t--success= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)
+                  td(data-title='Balance')= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)
+              tr
+                td(data-title='Date') 14.05.2017              
+                td(data-title='Type') Refill
+                td(data-title='Status'): span.t--danger Not Completed
+                td(data-title='Documents') —
+                td(data-title='Amount'):  span.t--danger= '$ ' + (Math.ceil(( Math.random() * 125 )*100)/100)
+                td(data-title='Balance')= '$ ' + (Math.ceil(( Math.random() * 125 )*100)/100)
+              - for (var x = 1; x < 10; x++)
+                tr
+                  td(data-title='Date') #{14 + x}.05.2017              
+                  td(data-title='Type') Refill
+                  td(data-title='Status'): span.t--success Completed
+                  td(data-title='Documents'): a(href="") Invoice #{346632+x}
+                  td(data-title='Amount'):  span.t--success= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)
+                  td(data-title='Balance')= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)

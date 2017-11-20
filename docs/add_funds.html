@@ -63,7 +63,7 @@
         <div class="row">
           <div class="col lg-10 offset-lg-1">
             <div class="row">
-              <div class="col md-7">
+              <div class="col lg-7">
                 <h2 class="page-title">Select payment method</h2>
                 <div class="panel payments">
                   <div class="row">
@@ -77,10 +77,149 @@
                   </div>
                 </div>
               </div>
-              <div class="col md-5">
+              <div class="col lg-5">
                 <h3 class="page-title">Your accounts</h3>
+                <table class="table responsive table--funds">
+                  <tbody>
+                    <tr>
+                      <td class="funds">$ 122 442.33</td>
+                      <td> <span>Название счёта</span><span class="t--mutted">хватит на 12 дней</span></td>
+                      <td><a href="">Вывести деньги</a></td>
+                      <td><a class="material-icons" href="">settings</a></td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <td class="funds">€ 23.89</td>
+                      <td> <span>Название счёта</span><span class="t--mutted">хватит на 12 дней</span></td>
+                      <td><a href="">Вывести деньги</a></td>
+                      <td><a class="material-icons" href="">settings</a></td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
+            <!-- History table //-->
+            <table class="table responsive table--history">
+              <caption><span>Payments history</span>
+                <nav class="filters">
+                  <ul>
+                    <li><a class="active" href="#">All time</a></li>
+                    <li><a href="#">Today</a></li>
+                    <li><a href="#">Yesterday</a></li>
+                    <li><a href="#">Week</a></li>
+                    <li><a href="#">Month</a></li>
+                    <li><a href="#">Section</a></li>
+                    <li><a href="#">Year</a></li>
+                    <li>
+                      <form class="filters-datepicker">
+                        <input type="text" name="daterange"><i class="material-icons placeholder">&#xE24F;</i>
+                      </form>
+                    </li>
+                  </ul>
+                </nav>
+              </caption>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Status  </th>
+                  <th>Documents</th>
+                  <th>Amount  </th>
+                  <th>Balance </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-title="Date">13.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346633</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 41.25</span></td>
+                  <td data-title="Balance">$ 1.49</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">14.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--danger">Not Completed</span></td>
+                  <td data-title="Documents">—</td>
+                  <td data-title="Amount"><span class="t--danger">$ 114.46</span></td>
+                  <td data-title="Balance">$ 12.41</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">15.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346633</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 100.8</span></td>
+                  <td data-title="Balance">$ 59.29</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">16.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346634</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 77.99</span></td>
+                  <td data-title="Balance">$ 123.77</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">17.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346635</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 123.73</span></td>
+                  <td data-title="Balance">$ 68.37</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">18.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346636</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 91.44</span></td>
+                  <td data-title="Balance">$ 38.73</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">19.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346637</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 24.48</span></td>
+                  <td data-title="Balance">$ 113.97</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">20.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346638</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 108.22</span></td>
+                  <td data-title="Balance">$ 119.59</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">21.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346639</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 100.98</span></td>
+                  <td data-title="Balance">$ 23.16</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">22.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346640</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 125.02</span></td>
+                  <td data-title="Balance">$ 109.63</td>
+                </tr>
+                <tr>
+                  <td data-title="Date">23.05.2017              </td>
+                  <td data-title="Type">Refill</td>
+                  <td data-title="Status"><span class="t--success">Completed</span></td>
+                  <td data-title="Documents"><a href="">Invoice 346641</a></td>
+                  <td data-title="Amount"><span class="t--success">$ 70.27</span></td>
+                  <td data-title="Balance">$ 52.29</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
