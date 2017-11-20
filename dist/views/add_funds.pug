@@ -72,14 +72,14 @@ block main
                   td(data-title='Status'): span.t--success Completed
                   td(data-title='Documents'): a(href="") Invoice #{346632+x}
                   td(data-title='Amount'):  span.t--success= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)
-                  td(data-title='Balance')= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)
+                  td(data-title='Balance'): strong= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)
               tr
                 td(data-title='Date') 14.05.2017              
                 td(data-title='Type') Refill
                 td(data-title='Status'): span.t--danger Not Completed
                 td(data-title='Documents') —
                 td(data-title='Amount'):  span.t--danger= '$ ' + (Math.ceil(( Math.random() * 125 )*100)/100)
-                td(data-title='Balance')= '$ ' + (Math.ceil(( Math.random() * 125 )*100)/100)
+                td(data-title='Balance'): strong= '$ ' + (Math.ceil(( Math.random() * 125 )*100)/100)
               - for (var x = 1; x < 10; x++)
                 tr
                   td(data-title='Date') #{14 + x}.05.2017              
@@ -87,4 +87,4 @@ block main
                   td(data-title='Status'): span.t--success Completed
                   td(data-title='Documents'): a(href="") Invoice #{346632+x}
                   td(data-title='Amount'):  span.t--success= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)
-                  td(data-title='Balance')= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)
+                  td(data-title='Balance'): strong= '$ ' + (Math.ceil(( Math.random() * (x + 125) )*100)/100)
