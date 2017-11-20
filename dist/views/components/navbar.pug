@@ -10,14 +10,14 @@ nav.navbar
       +item('Advert companies', './')
       +item('Platforms', 'publisher.html')
     ul.navbar__right
-      li.dropdown.finances
-        a.dropdown-toggle(data-toggle='dropdown')
+      li.dropdown.right.finances
+        .dropdown-toggle(data-toggle='dropdown')
           span $ 122.3
           i.material-icons keyboard_arrow_down
         ul.dropdown-menu
-          +item('Add funds', 'refill-funds.html')
+          +item('Add funds', 'add_funds.html')
           +item('Withdraw funds', 'withdraw-funds.html')
-      li.dropdown.user
+      li.dropdown.right.user
         a.dropdown-toggle(data-toggle='dropdown')
           img(src="https://unsplash.it/100?image=1005", alt="").user--avatar
           span.user--name Username
@@ -26,8 +26,8 @@ nav.navbar
           +item('Profile', 'profile-edit.html')
           +item('Documents', 'profile-docs.html')
           +item('Exit', 'login.html')
-      li.dropdown.lang
-        a.dropdown-toggle(data-toggle='dropdown') ENG
+      li.dropdown.right.lang
+        .dropdown-toggle(data-toggle='dropdown') ENG
         ul.dropdown-menu
           li: a(href="").active ENG
           li: a(href="") RUS
