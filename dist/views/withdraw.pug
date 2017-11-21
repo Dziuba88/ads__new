@@ -1,6 +1,6 @@
 extends models/default
 block head
-  - curent_page = 'Add funds'
+  - curent_page = 'Withdraw funds'
   include components/head
 block header
   include components/navbar
@@ -10,16 +10,52 @@ block main
         .col.lg-10.offset-lg-1
           .row
             .col.lg-7
-              h2.page-title Select payment method
-              .panel.payments
-                .row
-                  .payments--method: a(href=""): img(src="img/e-paypal.png", srcset="img/e-paypal@2x.png 2x, img/e-paypal@3x.png 3x", alt="")
-                  .payments--method: a(href=""): img(src="img/e-skrill.png", srcset="img/e-skrill@2x.png 2x, img/e-skrill@3x.png 3x", alt="")
-                  .payments--method: a(href=""): img(src="img/e-paxum-2-x.png", srcset="img/e-paxum-2-x@2x.png 2x, img/e-paxum-2-x@3x.png 3x", alt="")
-                  .payments--method: a(href=""): img(src="img/e-payoneer-2-x.png", srcset="img/e-payoneer-2-x@2x.png 2x, img/e-payoneer-2-x@3x.png 3x", alt="")
-                  .payments--method: a(href=""): img(src="img/e-payza-2-x.png", srcset="img/e-payza-2-x@2x.png 2x, img/e-payza-2-x@3x.png 3x", alt="")
-                  .payments--method: a(href=""): img(src="img/e-epayments-2-x.png", srcset="img/e-epayments-2-x@2x.png 2x, img/e-epayments-2-x@3x.png 3x", alt="")
-                  .payments--method: a(href=""): img(src="img/e-webmoney.png", srcset="img/e-webmoney@2x.png 2x, img/e-webmoney@3x.png 3x", alt="")
+              h2.page-title Enter amount to withdraw
+              .panel
+                form.form.form--validate
+                  .row
+                    .col.sm-4.md-3
+                      .form--row
+                        label Вывести
+                        .select
+                          input(type="text" placeholder="Выберите" required readonly).select--toggle
+                          i.material-icons keyboard_arrow_down
+                          ul.select--menu
+                            li.active: a(data-label='Сумма') Сумма
+                            li: a(data-label='% от суммы на счёте') % от суммы на счёте
+                    .col.sm-4.md-3
+                      .form--row
+                        label Сумма
+                        input(type="tel" required)
+                    .col.sm-8.md-6
+                      .form--row
+                        label Со счёта
+                        .select
+                          input(type="text" placeholder="Выберите" required readonly).select--toggle
+                          i.material-icons keyboard_arrow_down
+                          ul.select--menu
+                            li: a(data-label='$ 122,3 — Название счёта') $ 122,3 — Название счёта
+                            li: a(data-label='$ 122,3 — Название счёта') € 56,4 — Название счёта
+                  .row
+                    .col.sm-8.md-6
+                      .form--row
+                        label Куда вывести
+                        .select
+                          input(type="text" placeholder="Выберите" required readonly).select--toggle
+                          i.material-icons keyboard_arrow_down
+                          ul.select--menu
+                            li: a(data-label='PayPal') PayPal
+                            li: a(data-label='Skrill') Skrill
+                            li: a(data-label='Paxum') Paxum
+                            li: a(data-label='Payoneer') Payoneer
+                            li: a(data-label='Payza') Payza
+                            li: a(data-label='Epayments') Epayments
+                            li: a(data-label='eCoin') eCoin
+                            li: a(data-label='Webmoney') Webmoney
+
+                  .form--controls
+                    button.btn.btn--success(type="submit") Вывести средства
+                    span.t--mutted с вами свяжется менеджер <br>и уточнит реквизиты
             .col.lg-5
               h3.page-title Your accounts
               table.table.responsive.table--funds
@@ -29,7 +65,7 @@ block main
                     td 
                       span Название счёта
                       span.t--mutted хватит на 12 дней
-                    td: a(href="withdraw.html") Вывести деньги
+                    td: a(href="") Вывести деньги
                     td: a.material-icons(href="") settings
                 tbody
                   tr
@@ -37,7 +73,7 @@ block main
                     td 
                       span Название счёта
                       span.t--mutted хватит на 12 дней
-                    td: a(href="withdraw.html") Вывести деньги
+                    td: a(href="") Вывести деньги
                     td: a.material-icons(href="") settings
           // History table //
           h2.table-title Payments history

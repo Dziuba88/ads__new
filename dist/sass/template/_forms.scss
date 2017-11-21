@@ -1,0 +1,210 @@
+.form {
+
+  &--row {
+    margin-bottom: 20px;
+  }
+
+  &--controls {
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 10px;
+      line-height: 1;
+
+      @media #{$mobile} {
+        margin: 0;
+        padding-top: 10px;padding-left: 0;
+        display: block;
+
+        
+      }
+    }
+  }
+  input, label {
+    display: block;
+    width: 100%;
+
+  }
+
+  input {
+    height: 36px;
+    border: solid 1px $light;
+    border-radius: 2px;
+    padding: 0 10px;
+    box-shadow: none !important;
+
+    &:hover {
+       border: solid 1px #b3b3b3;
+    }
+
+    &:focus {
+      box-shadow: 0 1px 3px rgba($base, 0.2) !important;
+      border: solid 1px #b3b3b3;
+    }
+
+  }
+
+  label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $base;
+    opacity: .5;
+    margin-bottom: 5px;
+  }
+
+  .select {
+    position: relative;
+
+    i {
+      display: block;
+      position: absolute;
+      right: 5px;
+      top: 8px;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+    }
+
+    &.open i {transform: rotate(180deg);}
+
+    input, input:focus {
+      user-select: none !important;
+      cursor: pointer !important;
+      padding-right: 30px;
+      
+    }
+    .select--menu {
+      position: absolute;
+      top: 34px;
+      left: 0;
+      margin: 0;padding: 0;list-style: none;
+      z-index: 99;
+      background-color: #fff;
+      border: solid 1px #b3b3b3;
+      border-top: 0;
+      min-width: 100%;
+      max-height: 100px;
+
+
+      li {
+        display: block;
+        &:last-child {padding-bottom: 5px;}
+
+        a {
+          display: block;
+          padding: 5px 10px;
+          white-space: nowrap;
+          text-decoration: none;
+          user-select: none;
+          color: $base;
+          line-height: 20px;
+          white-space: normal;
+
+
+          &:hover {
+            background-color: rgba($accent,.3)
+          }
+        }
+
+          &.active a {
+            background-color: $accent;
+            color: #fff;
+          }
+      }
+      
+
+    }
+  }
+
+  &.horisontal {
+    p {
+      margin: 0 0 20px;
+    }
+    .form--controls {
+      padding-left: 100px;
+      padding-bottom: 20px; 
+    }
+    .form--row {
+      label {
+        display: inline-block;
+        line-height: 1;
+        margin: 0;
+        padding: 10px;
+        vertical-align: middle;
+        text-align: right;
+        width: 100px;
+      }
+
+      small.error {
+        padding-left: 100px;
+      }
+
+      ul.nav-tabs {
+        margin: 0;padding: 0;list-style: none;  
+        display: inline-block;line-height: 1;vertical-align: middle;
+        li {
+          display: inline-block;line-height: 1;vertical-align: middle;
+
+          a {
+            display: block;
+            padding: 10px;
+            border-radius: 2px;
+          }
+
+          &.active a {
+            text-decoration: none;
+            background-color: $accent;
+            color: #fff;
+          }
+        }
+      }
+
+      input {
+        display: inline-block;
+        width: 180px;
+        margin: 0;
+        line-height: 1;
+        vertical-align: middle;
+
+        &.lg {
+          width: 360px;
+        }
+      }
+    }
+
+    @media #{$mobile} {
+      .form--row {
+        label {
+          text-align: left;
+          padding: 0 0 5px;
+          display: block;
+        }
+
+        input, ul.nav-tabs {
+          display: block;width: 100% !important;
+        }
+
+        small.error {
+          padding-left: 0;
+        }
+      }
+      .form--controls {
+        padding-left: 0;
+      }
+
+    }
+  }
+
+  // Validation
+  .isError {
+    small.error {
+      font-size: 1rem;
+      color: $danger;
+      padding-top: 5px;
+      display: block;
+    }
+    input {
+      border: 1px solid $danger !important;
+    }
+  }
+}

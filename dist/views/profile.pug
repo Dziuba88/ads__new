@@ -1,0 +1,94 @@
+extends models/default
+block head
+  - curent_page = 'Profile'
+  include components/head
+block header
+  include components/navbar
+block main
+  .container.addfunds
+      .row
+        .col.lg-10.offset-lg-1
+          h2.page-title Payment information
+          .row
+            .col.lg-7
+              .panel
+                form.form.horisontal.form--validate
+                  p Эта информация нужна для получения платежей.<br>Мы не передаём данные третьим лицам.
+                  .form--row
+                    label Вы
+                    ul.nav-tabs
+                      li.active: a(href='#fiz', role='tab', data-toggle='tab') Физ. лицо
+                      li: a(href='#jur', role='tab', data-toggle='tab') Организация
+
+
+                  .tab-content
+                    #fiz.tab-pane.active(role='tabpanel')
+                      .form--row
+                        label ФИО
+                        input(type="text" value="Петрынин Фёдор Афансьевич" required).lg
+                      .form--row
+                        label Телефон
+                        input(type="tel" value="+7 930 223 44 44" required)
+                      .form--row
+                        label Страна
+                        input(type="text" value="Россия" required)
+                      .form--row
+                        label Город
+                        input(type="text" value="Великие Луки" required)
+                      .form--row
+                        label Индекс
+                        input(type="tel" value="256881" required)
+                      .form--row
+                        label Адрес
+                        input(type="text" value="ул. Ленина д. 56, кв. 3" required).lg
+                    #jur.tab-pane(role='tabpanel')
+                      .form--row
+                        label Компания
+                        input(type="text" value="ИП Петрынин" required).lg
+                      .form--row
+                        label VAT 
+                        input(type="tel" value="5166347899" required)
+                      .form--row
+                        label Телефон
+                        input(type="tel" value="+7 930 223 44 44" required)
+                      .form--row
+                        label Страна
+                        input(type="text" value="Россия" required)
+                      .form--row
+                        label Город
+                        input(type="text" value="Великие Луки" required)
+                      .form--row
+                        label Индекс
+                        input(type="tel" value="256881" required)
+                      .form--row
+                        label Адрес
+                        input(type="text" value="ул. Ленина д. 56, кв. 3" required).lg
+                  .form--controls
+                    button.btn.btn--success(type="submit") Сохранить
+
+            .col.lg-5
+              .panel.account--info
+                h2 Account info
+                p
+                  span.t--mutted ID
+                  span 4574577
+                p
+                  span.t--mutted Email
+                  span username@gmail.com
+                  a(href="") Изменить email
+                p
+                  span.t--mutted Пароль
+                  a(href="") Изменить пароль
+              .panel.account--info
+                h2 Documents
+                p Вы должны подтвердить свою личность и адрес проживания, чтобы получать платежи. Для этого загрузите фото документов.
+                ul.documents
+                  li.success
+                    i.material-icons insert_drive_file
+                    strong Водительское удостоверение с двух сторон
+                      span Документ проверен и одобрен
+                  li.danger
+                    i.material-icons insert_drive_file
+                    strong Квитанция из банка
+                      span Документ не прошел проверку. Не видно адреса, имя не совпадает с тем, что на водительском удостовернии.
+                  li.documents-footer: a(href="documents.html") Загрузить новый документ

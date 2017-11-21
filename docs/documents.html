@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>InxyADS || Documents</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;amp;subset=cyrillic">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="inxy loading">
+    <div class="inxy-preloader">
+      <div class="inxy-preloader__circle"></div>
+    </div>
+    <header class="inxy-header">
+      <!-- Default Navbar-->
+      <nav class="navbar">
+        <div class="navbar__header"><a class="navbar--brand" href="/"><img src="img/logo.svg" alt=""></a></div>
+        <div class="navbar--toggle"><i class="material-icons">menu</i></div>
+        <div class="navbar__body">
+          <ul class="navbar__left">
+                  <li><a href="./">Advert companies</a></li>
+                  <li><a href="publisher.html">Platforms</a></li>
+          </ul>
+          <ul class="navbar__right">
+            <li class="dropdown right finances">
+              <div class="dropdown-toggle" data-toggle="dropdown"><span>$ 122.3</span><i class="material-icons">keyboard_arrow_down</i></div>
+              <ul class="dropdown-menu">
+                      <li><a href="add_funds.html">Add funds</a></li>
+                      <li><a href="withdraw.html">Withdraw funds</a></li>
+              </ul>
+            </li>
+            <li class="dropdown right user"><a class="dropdown-toggle" data-toggle="dropdown"><img class="user--avatar" src="https://unsplash.it/100?image=1005" alt=""><span class="user--name">Username</span><i class="material-icons">keyboard_arrow_down</i></a>
+              <ul class="dropdown-menu">
+                      <li><a href="profile.html">Profile</a></li>
+                      <li><a class="active" href="profile-docs.html">Documents</a></li>
+                      <li><a href="login.html">Exit</a></li>
+              </ul>
+            </li>
+            <li class="dropdown right lang">
+              <div class="dropdown-toggle" data-toggle="dropdown">ENG</div>
+              <ul class="dropdown-menu">
+                <li><a class="active" href="">ENG</a></li>
+                <li><a href="">RUS</a></li>
+                <li><a href="">GER</a></li>
+                <li><a href="">鸡汤</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row">
+          <div class="col lg-10 offset-lg-1">
+            <h1 class="page-title">Documents</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="inxy-main">
+      <div class="container addfunds">
+        <div class="row">
+          <div class="col lg-10 offset-lg-1">
+            <h2 class="page-title">Documents information</h2>
+            <div class="row">
+              <div class="col md-6">
+                <div class="panel account--info">
+                  <h2>Documents</h2>
+                  <p>Вы должны подтвердить свою личность и адрес проживания, чтобы получать платежи. Для этого загрузите фото документов.</p>
+                  <ul class="documents">
+                    <li class="success"><i class="material-icons">insert_drive_file</i><strong>Водительское удостоверение с двух сторон<span>Документ проверен и одобрен</span></strong></li>
+                    <li class="danger"><i class="material-icons">insert_drive_file</i><strong>Квитанция из банка<span>Документ не прошел проверку. Не видно адреса, имя не совпадает с тем, что на водительском удостовернии.</span></strong></li>
+                    <li class="verification"><i class="material-icons">insert_drive_file</i><strong>Квитанция из банка<span>Идёт проверка</span></strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col md-6">
+                <div class="panel account--info">
+                  <h2>Upload Documents</h2>
+                  <p>Вы должны подтвердить свою личность и адрес проживания, чтобы получать платежи. Для этого загрузите фото документов.</p>
+                  <form class="form">
+                    <div class="form--row">
+                      <label>Документ с фотографией</label>
+                      <div class="select">
+                        <input class="select--toggle" type="text" value="Водительское удостоверение с двух сторон" required readonly><i class="material-icons">keyboard_arrow_down</i>
+                        <ul class="select--menu">
+                          <li class="active"><a data-label="Водительское удостоверение с двух сторон">Водительское удостоверение с двух сторон</a></li>
+                          <li><a data-label="Паспорт — разворот с фото и пропиской">Паспорт — разворот с фото и пропиской</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form--row">
+                      <label class="btn btn--success" for="f1">Выбрать файл
+                        <input type="file" id="f1">
+                      </label>
+                    </div>
+                  </form>
+                  <form class="form">
+                    <div class="form--row">
+                      <label>Документ, подтверждающий адрес проживания</label>
+                      <div class="select">
+                        <input class="select--toggle" type="text" value="Квитанция за квартплату, электричество или газ." required readonly><i class="material-icons">keyboard_arrow_down</i>
+                        <ul class="select--menu">
+                          <li class="active"><a data-label="Квитанция за квартплату, электричество или газ.">Квитанция за квартплату, электричество или газ.</a></li>
+                          <li><a data-label="Письмо из правительственных структур: налоговой, полиции и пр.">Письмо из правительственных структур: налоговой, полиции и пр.</a></li>
+                          <li><a data-label="Квитанция из банка">Квитанция из банка</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form--row">
+                      <label class="btn btn--success" for="f2">Выбрать файл
+                        <input type="file" id="f2">
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="panel account--info">
+                  <h2>Upload Documents</h2>
+                  <p>Вы должны подтвердить свою личность и адрес проживания, чтобы получать платежи. Для этого загрузите фото документов.</p>
+                  <form class="form">
+                    <div class="form--row">
+                      <label>Документ с фотографией</label>
+                      <div class="select">
+                        <input class="select--toggle" type="text" value="Водительское удостоверение с двух сторон" required readonly><i class="material-icons">keyboard_arrow_down</i>
+                        <ul class="select--menu">
+                          <li class="active"><a data-label="Водительское удостоверение с двух сторон">Водительское удостоверение с двух сторон</a></li>
+                          <li><a data-label="Паспорт — разворот с фото и пропиской">Паспорт — разворот с фото и пропиской</a></li>
+                        </ul>
+                      </div>
+                      <ul class="file">
+                        <li><span class="file--thumb"><img src="http://bfmac.com/media/obshhie-yuridicheskie-voprosy/kak-sdelat-skan-pasporta_1.jpg" alt=""></span><span class="file--info"><span>IMG_3466</span><a href="">удалить</a></span></li>
+                        <li><span class="file--thumb"><img src="http://bfmac.com/media/obshhie-yuridicheskie-voprosy/kak-sdelat-skan-pasporta_1.jpg" alt=""></span><span class="file--info"><span>IMG_3466</span><a href="">удалить</a></span></li>
+                        <li><span class="file--thumb"><img src="http://bfmac.com/media/obshhie-yuridicheskie-voprosy/kak-sdelat-skan-pasporta_1.jpg" alt=""></span><span class="file--info"><span>IMG_3466</span><a href="">удалить</a></span></li>
+                      </ul>
+                    </div>
+                    <div class="form--row">
+                      <button class="btn btn--success">Загрузить</button>
+                    </div>
+                  </form>
+                  <form class="form">
+                    <div class="form--row">
+                      <label>Документ, подтверждающий адрес проживания</label>
+                      <div class="select">
+                        <input class="select--toggle" type="text" value="Квитанция за квартплату, электричество или газ." required readonly><i class="material-icons">keyboard_arrow_down</i>
+                        <ul class="select--menu">
+                          <li class="active"><a data-label="Квитанция за квартплату, электричество или газ.">Квитанция за квартплату, электричество или газ.</a></li>
+                          <li><a data-label="Письмо из правительственных структур: налоговой, полиции и пр.">Письмо из правительственных структур: налоговой, полиции и пр.</a></li>
+                          <li><a data-label="Квитанция из банка">Квитанция из банка</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form--row">
+                      <button class="btn btn--success">Загрузить</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="inxy-footer">
+      <div class="copyright">
+         © 2017 <a href="http://inxyads.com" target="_blank">INXYADS.COM</a>, part of <a href="http://inxy.com" target="_blank">INXY.COM</a></div>
+      <div class="support"><a class="support--left">Tech Support</a><a class="support--right">Your manager Katy is online</a></div>
+    </footer>
+    <!-- Scripts-->
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

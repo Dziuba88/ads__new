@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>InxyADS || Add funds</title>
+    <title>InxyADS || Withdraw funds</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;amp;subset=cyrillic">
     <link rel="stylesheet" href="css/styles.css">
@@ -27,8 +27,8 @@
             <li class="dropdown right finances">
               <div class="dropdown-toggle" data-toggle="dropdown"><span>$ 122.3</span><i class="material-icons">keyboard_arrow_down</i></div>
               <ul class="dropdown-menu">
-                      <li><a class="active" href="add_funds.html">Add funds</a></li>
-                      <li><a href="withdraw.html">Withdraw funds</a></li>
+                      <li><a href="add_funds.html">Add funds</a></li>
+                      <li><a class="active" href="withdraw.html">Withdraw funds</a></li>
               </ul>
             </li>
             <li class="dropdown right user"><a class="dropdown-toggle" data-toggle="dropdown"><img class="user--avatar" src="https://unsplash.it/100?image=1005" alt=""><span class="user--name">Username</span><i class="material-icons">keyboard_arrow_down</i></a>
@@ -53,7 +53,7 @@
       <div class="container">
         <div class="row">
           <div class="col lg-10 offset-lg-1">
-            <h1 class="page-title">Add funds</h1>
+            <h1 class="page-title">Withdraw funds</h1>
           </div>
         </div>
       </div>
@@ -64,17 +64,65 @@
           <div class="col lg-10 offset-lg-1">
             <div class="row">
               <div class="col lg-7">
-                <h2 class="page-title">Select payment method</h2>
-                <div class="panel payments">
-                  <div class="row">
-                    <div class="payments--method"><a href=""><img src="img/e-paypal.png" srcset="img/e-paypal@2x.png 2x, img/e-paypal@3x.png 3x" alt=""></a></div>
-                    <div class="payments--method"><a href=""><img src="img/e-skrill.png" srcset="img/e-skrill@2x.png 2x, img/e-skrill@3x.png 3x" alt=""></a></div>
-                    <div class="payments--method"><a href=""><img src="img/e-paxum-2-x.png" srcset="img/e-paxum-2-x@2x.png 2x, img/e-paxum-2-x@3x.png 3x" alt=""></a></div>
-                    <div class="payments--method"><a href=""><img src="img/e-payoneer-2-x.png" srcset="img/e-payoneer-2-x@2x.png 2x, img/e-payoneer-2-x@3x.png 3x" alt=""></a></div>
-                    <div class="payments--method"><a href=""><img src="img/e-payza-2-x.png" srcset="img/e-payza-2-x@2x.png 2x, img/e-payza-2-x@3x.png 3x" alt=""></a></div>
-                    <div class="payments--method"><a href=""><img src="img/e-epayments-2-x.png" srcset="img/e-epayments-2-x@2x.png 2x, img/e-epayments-2-x@3x.png 3x" alt=""></a></div>
-                    <div class="payments--method"><a href=""><img src="img/e-webmoney.png" srcset="img/e-webmoney@2x.png 2x, img/e-webmoney@3x.png 3x" alt=""></a></div>
-                  </div>
+                <h2 class="page-title">Enter amount to withdraw</h2>
+                <div class="panel">
+                  <form class="form form--validate">
+                    <div class="row">
+                      <div class="col sm-4 md-3">
+                        <div class="form--row">
+                          <label>Вывести</label>
+                          <div class="select">
+                            <input class="select--toggle" type="text" placeholder="Выберите" required readonly><i class="material-icons">keyboard_arrow_down</i>
+                            <ul class="select--menu">
+                              <li class="active"><a data-label="Сумма">Сумма</a></li>
+                              <li><a data-label="% от суммы на счёте">% от суммы на счёте</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col sm-4 md-3">
+                        <div class="form--row">
+                          <label>Сумма</label>
+                          <input type="tel" required>
+                        </div>
+                      </div>
+                      <div class="col sm-8 md-6">
+                        <div class="form--row">
+                          <label>Со счёта</label>
+                          <div class="select">
+                            <input class="select--toggle" type="text" placeholder="Выберите" required readonly><i class="material-icons">keyboard_arrow_down</i>
+                            <ul class="select--menu">
+                              <li><a data-label="$ 122,3 — Название счёта">$ 122,3 — Название счёта</a></li>
+                              <li><a data-label="$ 122,3 — Название счёта">€ 56,4 — Название счёта</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col sm-8 md-6">
+                        <div class="form--row">
+                          <label>Куда вывести</label>
+                          <div class="select">
+                            <input class="select--toggle" type="text" placeholder="Выберите" required readonly><i class="material-icons">keyboard_arrow_down</i>
+                            <ul class="select--menu">
+                              <li><a data-label="PayPal">PayPal</a></li>
+                              <li><a data-label="Skrill">Skrill</a></li>
+                              <li><a data-label="Paxum">Paxum</a></li>
+                              <li><a data-label="Payoneer">Payoneer</a></li>
+                              <li><a data-label="Payza">Payza</a></li>
+                              <li><a data-label="Epayments">Epayments</a></li>
+                              <li><a data-label="eCoin">eCoin</a></li>
+                              <li><a data-label="Webmoney">Webmoney</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form--controls">
+                      <button class="btn btn--success" type="submit">Вывести средства</button><span class="t--mutted">с вами свяжется менеджер <br>и уточнит реквизиты</span>
+                    </div>
+                  </form>
                 </div>
               </div>
               <div class="col lg-5">
@@ -84,7 +132,7 @@
                     <tr>
                       <td class="funds">$ 122 442.33</td>
                       <td> <span>Название счёта</span><span class="t--mutted">хватит на 12 дней</span></td>
-                      <td><a href="withdraw.html">Вывести деньги</a></td>
+                      <td><a href="">Вывести деньги</a></td>
                       <td><a class="material-icons" href="">settings</a></td>
                     </tr>
                   </tbody>
@@ -92,7 +140,7 @@
                     <tr>
                       <td class="funds">€ 23.89</td>
                       <td> <span>Название счёта</span><span class="t--mutted">хватит на 12 дней</span></td>
-                      <td><a href="withdraw.html">Вывести деньги</a></td>
+                      <td><a href="">Вывести деньги</a></td>
                       <td><a class="material-icons" href="">settings</a></td>
                     </tr>
                   </tbody>
@@ -134,88 +182,88 @@
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346633</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 42.4</span></td>
-                  <td data-title="Balance"><strong>$ 119.31</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 84.4</span></td>
+                  <td data-title="Balance"><strong>$ 31.93</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">14.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--danger">Not Completed</span></td>
                   <td data-title="Documents">—</td>
-                  <td data-title="Amount"><span class="t--danger">$ 49.61</span></td>
-                  <td data-title="Balance"><strong>$ 16.47</strong></td>
+                  <td data-title="Amount"><span class="t--danger">$ 94.7</span></td>
+                  <td data-title="Balance"><strong>$ 16.96</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">15.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346633</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 107.7</span></td>
-                  <td data-title="Balance"><strong>$ 72.35</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 37.6</span></td>
+                  <td data-title="Balance"><strong>$ 46.18</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">16.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346634</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 27.31</span></td>
-                  <td data-title="Balance"><strong>$ 7.09</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 21.48</span></td>
+                  <td data-title="Balance"><strong>$ 15.53</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">17.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346635</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 0.01</span></td>
-                  <td data-title="Balance"><strong>$ 115.79</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 91.44</span></td>
+                  <td data-title="Balance"><strong>$ 82.97</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">18.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346636</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 89.19</span></td>
-                  <td data-title="Balance"><strong>$ 36.42</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 89.5</span></td>
+                  <td data-title="Balance"><strong>$ 94.76</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">19.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346637</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 28.32</span></td>
-                  <td data-title="Balance"><strong>$ 122.85</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 12.86</span></td>
+                  <td data-title="Balance"><strong>$ 76.08</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">20.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346638</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 85.74</span></td>
-                  <td data-title="Balance"><strong>$ 25.61</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 37.46</span></td>
+                  <td data-title="Balance"><strong>$ 7.51</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">21.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346639</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 100.5</span></td>
-                  <td data-title="Balance"><strong>$ 6.34</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 40.23</span></td>
+                  <td data-title="Balance"><strong>$ 37.52</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">22.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346640</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 47.24</span></td>
-                  <td data-title="Balance"><strong>$ 114.54</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 25.65</span></td>
+                  <td data-title="Balance"><strong>$ 109.84</strong></td>
                 </tr>
                 <tr>
                   <td data-title="Date">23.05.2017              </td>
                   <td data-title="Type">Refill</td>
                   <td data-title="Status"><span class="t--success">Completed</span></td>
                   <td data-title="Documents"><a href="">Invoice 346641</a></td>
-                  <td data-title="Amount"><span class="t--success">$ 102.24</span></td>
-                  <td data-title="Balance"><strong>$ 63.22</strong></td>
+                  <td data-title="Amount"><span class="t--success">$ 33.99</span></td>
+                  <td data-title="Balance"><strong>$ 127.39</strong></td>
                 </tr>
               </tbody>
             </table>

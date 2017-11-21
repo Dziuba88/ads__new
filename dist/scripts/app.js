@@ -580,7 +580,7 @@ $(document).ready(function() {
   };
 // DatePicker //
   $('input[name="daterange"]').daterangepicker({
-    parentEl : "form",
+    parentEl : "form.filters-datepicker",
     "opens": "left",
     "linkedCalendars": false,
     locale: {format: 'YYYY.MM.DD'},
@@ -588,5 +588,32 @@ $(document).ready(function() {
     endDate: '2017.12.31'
   });
 
-  
+// NiceScroll Select //
+  $(".select--menu").niceScroll({
+    autohidemode: false,
+    cursorborder:'none',
+    cursorwidth:6,
+    cursoropacitymax: .2,
+    cursorcolor: "#000",
+    railpadding: {
+      top: 2,
+      right: 2,
+      left: 2,
+      bottom: 2
+    }
+  });  
+
+// Validation forms //
+  if($(".form--validate").length) {
+    $('.form--validate').each(function() {
+      $(this).validate({
+        focusInvalid: false,
+        errorElement: "small",
+        errorPlacement: function(error, element) {{
+          $( element ).parent().addClass("isError");
+          error.insertAfter( element );
+        }}
+      });
+    });
+  };
 });
