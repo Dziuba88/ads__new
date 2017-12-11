@@ -1,0 +1,14 @@
+extends models/forms
+block head
+  - curent_page = 'Forgot password'
+  include components/head
+block main
+  form.form.form--validate
+    .form--row
+      label Email
+      input(type="email" required)
+    .form--controls
+      button.btn.btn--success.block(type="submit") Sign up
+    .form--footer
+      a(href="login.html") Login here
+      a(href="registration.html") Registration

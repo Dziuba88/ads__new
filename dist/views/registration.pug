@@ -1,0 +1,35 @@
+extends models/forms
+block head
+  - curent_page = 'Registration'
+  include components/head
+block main
+  form.form.form--validate
+    .form--row
+      label You are
+      .tab-radio
+        input(type="radio" name="account" checked)#adv
+        label(for='adv') Advertiser
+      .tab-radio
+        input(type="radio" name="account")#pub
+        label(for='pub') Publisher
+    .form--row
+      label Email
+      input(type="email" required)
+    .form--row._password
+      label Password
+      input(type="password" required)
+      i.material-icons visibility
+    .form--row._password
+      label Confirm password
+      input(type="password" required)
+      i.material-icons visibility
+    .form--row: .checkbox
+      input(type="checkbox" required)#terms
+      label(for='terms') I have read <a href="#">terms and conditions and</a> I agree with it
+    .form--row: .checkbox
+      input(type="checkbox")#newsler
+      label(for='newsler') I want to receive emails about discounts and news of Inxy ADS. Once per month.
+    .form--controls
+      button.btn.btn--success.block(type="submit") Sign up
+    .form--footer Already registered?<br>
+      a(href="login.html") Login here

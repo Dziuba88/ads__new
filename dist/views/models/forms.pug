@@ -1,0 +1,15 @@
+doctype html
+block variables
+html(lang="en")
+  block head
+  body.inxy.loading.login-register
+    .inxy-preloader: .inxy-preloader__circle
+    main.inxy-main
+      .container
+        .form__header
+          img(src="img/logo.svg", alt="").inxy--logo
+          h1 #{curent_page}
+        .form__body
+          block main
+    footer.inxy-footer: include ../components/footer
+    include ../components/scripts

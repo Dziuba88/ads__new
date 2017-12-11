@@ -1,0 +1,18 @@
+extends models/forms
+block head
+  - curent_page = 'Authorization'
+  include components/head
+block main
+  form.form.form--validate
+    .form--row
+      label Email
+      input(type="email" required)
+    .form--row._password
+      label Password
+      input(type="password" required)
+      i.material-icons visibility
+    .form--row: a(href="forgot.html") Forgot password
+    .form--controls
+      button.btn.btn--success.block(type="submit") Sign up
+    .form--footer Already registered?<br>
+      a(href="registration.html") Registration
