@@ -89,7 +89,7 @@ block main
               h2 Параметры кампании
               p
                 span.t--mutted Рекламируем страницу
-                span.campaign__link http: //inxyads.com /advertiser /statistics
+                a.campaign__link(href="") http://inxyads.com/advertiser/statistics
               p
                 span.t--mutted Траффик
                 span Компьютеры
@@ -97,8 +97,8 @@ block main
                 span.t--mutted Формат
                 span PopUnder
               p
-                span.t--mutted CPA  
-                  i.material-icons.tooltip-bottom(data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit.") info_outline
+                span.tooltip-bottom(data-tooltip="Click-through rate (CTR) is the ratio of users who click on a specific link to the number of total users who view a page, email, or advertisement.") CPA  
+                  i.material-icons info_outline
                 span $ 3.2
               p
                 span.t--mutted Лимит
@@ -107,15 +107,17 @@ block main
         // History table //
         table.table.responsive.table--history
           caption
-            span Payments history
+            span Payments Statistics
           thead
             tr
               th Date
-              th CPA  
-                span.tooltip-bottom(data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit."): i.material-icons info_outline
+              th: span.tooltip-bottom(data-tooltip="Click-through rate (CTR) is the ratio of users who click on a specific link to the number of total users who view a page, email, or advertisement.") 
+                span CPA  
+                span: i.material-icons info_outline
               th Spent  
-              th CTR  
-                span.tooltip-bottom(data-tooltip="Lorem ipsum dolor sit amet, consectetur adipisicing elit."): i.material-icons info_outline
+              th: span.tooltip-bottom(data-tooltip="Click-through rate (CTR) is the ratio of users who click on a specific link to the number of total users who view a page, email, or advertisement.") 
+                span CTR  
+                span: i.material-icons info_outline
               th Impressions  
               th Clicks  
           tbody

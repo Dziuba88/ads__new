@@ -9,10 +9,9 @@ body {
   background-color: $light;
   color: $base;
 }
-
-h1.page-title {
-  font-size: 1.846rem;
-  font-weight: bold;
+h1.page-title { 
+  font-size: 2.46rem;
+  font-weight: 400;
   margin: 0;
   padding: 40px 0 20px;
   line-height: 1;
@@ -23,6 +22,7 @@ h1.page-title {
     .switch {display: block;margin-top: 10px;margin-left: 0;}
   }
 }
+.inxy-header h1.page-title {font-size: 1.846rem;font-weight: bold;}
 
 .inxy-header {
   h1.page-title {
@@ -44,6 +44,29 @@ h2.page-title {
   margin: 0;
   padding: 40px 0 20px;
   line-height: 2.5rem;
+
+    small {
+      display: flex;
+      align-items: center;
+      float: right;
+      opacity: 0.5;
+      font-size: 13px;
+      line-height: 1.38;
+      text-align: right;
+      color: #212121;
+
+      i { 
+        font-size: 31px;
+        margin-left: 10px;
+      }
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
 }
 
 h2.table-title {
@@ -144,4 +167,31 @@ a {
     }
   }
 
+}
+
+.tooltip-bottom {
+  cursor: pointer;
+  position: relative;
+  color: #757575;
+
+  &:hover {
+    color: $base;
+
+    &:after {
+      position: absolute;
+      top: 100%;
+      width: 270px;
+      left: 50%;
+      margin-left: -135px;
+      text-align: center;
+      display: block;
+      content: attr(data-tooltip);
+      border-radius: 2px;
+
+      font-size: 13px;
+      background-color: rgba(33, 33, 33, 0.9);
+      color: #fff;
+      padding: 12px 15px 17px 15px;
+    }
+  }
 }

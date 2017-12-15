@@ -1,5 +1,7 @@
 .form {
-
+  padding-top: 10px;
+  padding-bottom: 30px;
+  p {padding-left: 20px;}
   &--row {
     margin-bottom: 20px;
   }
@@ -214,6 +216,7 @@
 
 .login-register {
   .form {
+
     label {
       display: block;
       width: 100%;

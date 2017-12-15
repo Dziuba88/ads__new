@@ -105,12 +105,24 @@
             line-height: 1;
             vertical-align: middle;
             white-space: nowrap;
+            color: $base;
           }
+          .dropdown-toggle i {margin-top: 1px;}
           &--avatar {
             display: block;
             width: 30px;height: 30px;
             border-radius: 50%;
             margin-right: 10px;
+          }
+
+          &.open .dropdown-toggle * {
+            color: #fff;
+          }
+        }
+
+        .lang {
+          .dropdown-toggle {
+             background-color: rgba($accent,.3)
           }
         }
 

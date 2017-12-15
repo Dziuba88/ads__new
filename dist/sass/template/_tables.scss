@@ -12,6 +12,8 @@
     font-size: 2.46rem;
     line-height: 1;
 
+    a.btn {float: right;}
+
     .filters {
       padding: 20px 0 0; 
       ul li a {
@@ -27,11 +29,25 @@
   }  
 
   thead {
-    border-top: 1px solid rgba($grey, .5);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);;
     color: $grey;
 
     th, td {
       padding: 10px 20px;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+      }
+
+      i {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 1;
+        font-size: 15px;
+        margin-left: .25em;
+      }
     }  
   }
   tfoot {
@@ -97,6 +113,10 @@
       background-color: #fff;
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
 
+      &:hover {
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.35);
+      }
+
       span, small {
         display: block;
         font-size: 1rem;
@@ -144,7 +164,8 @@
     tbody, thead, tfoot {
       td, th {
         text-align: right;
-        padding: 10px;
+        padding: 15px 30px;
+
 
         &:first-child {text-align: left;}
       }
@@ -165,7 +186,7 @@
 
       td {
         white-space: nowrap;
-        padding: 15px 10px;
+        padding: 14px 20px;
         span {
           display: block;
         }
