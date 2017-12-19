@@ -1,0 +1,8 @@
+extends models/forms
+block head
+  - curent_page = 'Password reset link has been sent to your email'
+  - page_class = 'link_sent'
+  include components/head
+block main
+  .link_sent
+    a.btn.btn--success.block(href="login.html") Login here

@@ -1,0 +1,45 @@
+extends models/default
+block head
+  - curent_page = 'Add funds Empty'
+  include components/head
+block header
+  include components/navbar
+block main
+  .container.addfunds
+      .row
+        .col.lg-10.offset-lg-1
+          .row
+            .col.lg-7
+              h2.page-title Select payment method
+              .panel.payments
+                .row
+                  .payments--method: a(href=""): img(src="img/ic_paypal.svg", alt="")
+                  .payments--method: a(href=""): img(src="img/ic_skrill.svg", alt="")
+                  .payments--method: a(href=""): img(src="img/ic_paxum.svg", alt="")
+                  .payments--method: a(href=""): img(src="img/ic_payoneer.svg", alt="")
+                  .payments--method: a(href=""): img(src="img/ic_payza.svg", alt="")
+                  .payments--method: a(href=""): img(src="img/ic_epayments.svg", alt="")
+                  .payments--method: a(href=""): img(src="img/ic_webmoney.svg", alt="")
+            .col.lg-5
+              h3.page-title Your accounts
+              table.table.responsive.table--funds
+                tbody
+                  tr
+                    td.funds $ 0.00
+                    td 
+                      span Название счёта
+                      //span.t--mutted хватит на 12 дней
+                    //td: a(href="withdraw.html") Вывести деньги
+                    td: a.material-icons(href="") settings
+                tbody
+                  tr
+                    td.funds € 0.00
+                    td 
+                      span Название счёта
+                      //span.t--mutted хватит на 12 дней
+                    //td: a(href="withdraw.html") Вывести деньги
+                    td: a.material-icons(href="") settings
+          // History table //
+          h2.table-title Payments history
+          hr
+          p.t--mutted You haven't transactions yet

@@ -1,0 +1,65 @@
+extends models/default
+block head
+  - curent_page = 'Withdraw Empty'
+  include components/head
+block header
+  include components/navbar
+block main
+  .container.addfunds
+      .row
+        .col.lg-10.offset-lg-1
+          .row
+            .col.lg-7
+              h2.page-title Enter amount to withdraw
+              .panel
+                form.form.form--validate
+                  .row
+                    .col.sm-4.md-3
+                      .form--row
+                        label Вывести
+                        .select
+                          input(type="text" placeholder="Выберите" required readonly disabled).select--toggle
+                          i.material-icons.t--mutted keyboard_arrow_down
+                    .col.sm-4.md-3
+                      .form--row
+                        label Сумма
+                        input(type="tel" placeholder="0.00" required disabled)
+                    .col.sm-8.md-6
+                      .form--row
+                        label Со счёта
+                        .select
+                          input(type="text" placeholder="Выберите" required readonly disabled).select--toggle
+                          i.material-icons.t--mutted keyboard_arrow_down
+                  .row
+                    .col.sm-8.md-6
+                      .form--row
+                        label Куда вывести
+                        .select
+                          input(type="text" placeholder="Выберите" required readonly disabled).select--toggle
+                          i.material-icons.t--mutted keyboard_arrow_down
+                  .form--controls
+                    button.btn.btn--success(type="submit" disabled) Create a request
+                    span.t--danger You haven’t enough money to withdraw
+            .col.lg-5
+              h3.page-title Your accounts
+              table.table.responsive.table--funds
+                tbody
+                  tr
+                    td.funds $ 0.00
+                    td 
+                      span Название счёта
+                      //span.t--mutted хватит на 12 дней
+                    //td: a(href="withdraw.html") Вывести деньги
+                    td: a.material-icons(href="") settings
+                tbody
+                  tr
+                    td.funds € 0.00
+                    td 
+                      span Название счёта
+                      //span.t--mutted хватит на 12 дней
+                    //td: a(href="withdraw.html") Вывести деньги
+                    td: a.material-icons(href="") settings
+          // History table //
+          h2.table-title Payments history
+          hr
+          p.t--mutted You haven't transactions yet

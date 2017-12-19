@@ -29,8 +29,8 @@
   }  
 
   thead {
-    border-top: 1px solid rgba(0, 0, 0, 0.15);;
-    color: $grey;
+    border-top: 1px solid #D5D5D5;
+    color: rgba($base, 0.5);
 
     th, td {
       padding: 10px 20px;
@@ -193,6 +193,10 @@
 
         &.funds {
           font-size: 2rem;
+        }
+        &:last-child {
+          text-align: right;
+          padding: 0;
         }
       }
     }

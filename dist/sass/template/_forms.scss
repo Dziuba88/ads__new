@@ -44,6 +44,28 @@
       border: solid 1px #b3b3b3;
     }
 
+    &[disabled], &.disabled {
+      cursor: default !important;
+      border: 1px solid #d5d5d5 !important;
+      background-color: #efefef !important;
+      color: #212121;
+
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: rgba($base, 0.3);opacity: 1;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: rgba($base, 0.3);opacity: 1;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: rgba($base, 0.3);opacity: 1;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: rgba($base, 0.3);opacity: 1;
+      }
+
+
+    }
+
   }
 
   label {
@@ -65,13 +87,18 @@
       width: 20px;
       height: 20px;
       font-size: 20px;
+      user-select: none;
+
+      &.t--mutted {
+        color: rgba($base, 0.3);opacity: 1;
+      }
     }
 
     &.open i {transform: rotate(180deg);}
 
     input, input:focus {
       user-select: none !important;
-      cursor: pointer !important;
+      cursor: pointer;
       padding-right: 30px;
       
     }
@@ -333,6 +360,26 @@
 
         }
       }
+    }
+  }
+
+
+  .link_sent {
+    .form__body {
+      width: 215px;
+    }
+    .form__header h1 {
+      max-width: 450px;
+      font-size: 32px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin: 40px auto;
     }
   }
 }
