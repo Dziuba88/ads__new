@@ -116,7 +116,31 @@
         margin: 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 
-        &:last-child, &.filters--title {display: none;}
+        &.filters--title {display: none;}
+        &:last-child {
+          border: none;
+          padding: 5px 0 0;
+        }
+        .filters-datepicker {
+          margin-left: 0;
+        }
+        .filters-datepicker input {
+          width: 100%;
+          text-align: center;
+          padding: 0 24px;
+        }
+
+        .filters-datepicker .daterangepicker {
+          width: 220px;
+        }
+
+        .filters-datepicker .daterangepicker .calendar {
+          float: none;
+          width: 100%;
+          padding: 0;
+          margin: 0 0 10px;
+          max-width: none;
+        }
       }
     }
   }

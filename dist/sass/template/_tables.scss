@@ -148,10 +148,11 @@
       text-decoration: none;
       color: rgba($accent, .3);
       display: block;
-      width: 26px;
-      height: 26px;
+      width: 36px;
+      height: 36px;
       font-size: 26px;
       margin: 0 auto;
+      padding: 5px;
 
       &:hover {
         color: $accent;
@@ -204,10 +205,11 @@
       text-decoration: none;
       color: rgba($accent, .3);
       display: block;
-      width: 26px;
-      height: 26px;
+      width: 36px;
+      height: 36px;
       font-size: 26px;
       margin: 0 auto;
+      padding: 5px;
 
       &:hover {
         color: $accent;
@@ -323,7 +325,12 @@
       }
     }
 
+    caption a.btn {
+      float: none;
+      margin-top: 10px;
+    }
   }
+
 
 
 
